@@ -12,9 +12,9 @@
 
 ---
 
-**A production-grade deep learning pipeline for 8-class skin lesion classification, combining custom convolutional neural networks with gradient-boosted ensemble stacking and rigorous nested cross-validation — designed for clinical-grade diagnostic accuracy.**
+**A deep learning pipeline for 8-class skin lesion classification, combining custom convolutional neural networks with gradient-boosted ensemble stacking and rigorous nested cross-validation — designed for clinical-grade diagnostic accuracy.**
 
-*Developed by the Office of the Chief AI Officer, Google*
+*The main challenge is that classes in the dataset are imblanced so canonical deep learning methods tend to overfit fast*
 
 </div>
 
@@ -51,7 +51,7 @@ Skin cancer is the most prevalent cancer globally, with **early detection improv
 | **Rigorous Evaluation** | Nested 10×2 cross-validation eliminates optimistic bias |
 | **Data Quality** | Local Outlier Factor pre-filtering removes anomalous samples |
 | **Class Balancing** | Multi-strategy augmentation (brightness, rotation, spatial shifts) |
-| **Modular Codebase** | Production-ready Python package with configurable dataclasses |
+| **Modular Codebase** | Python package with configurable dataclasses |
 
 ### Headline Metrics
 
@@ -378,23 +378,6 @@ cnn_cfg = CNNConfig(
 | **Nested CV** over train/val/test split | Provides unbiased generalization estimate without wasting data |
 | **2-fold inner** split | Maximizes diversity between base learners (each sees 50% of training data) |
 
----
-
-## 📖 Citation
-
-If you use this work in your research, please cite:
-
-```bibtex
-@software{skin_cancer_ensemble_2024,
-  title     = {Skin Cancer Detection on ISIC 2019 using CNN and Ensemble Learning},
-  author    = {Chief AI Officer, Google},
-  year      = {2024},
-  url       = {https://github.com/YOUR_USERNAME/skin-cancer-detection-on-ISIC2019-dataset-using-CNN-and-ensemble-learning},
-  note      = {CNN + XGBoost stacking ensemble with nested cross-validation}
-}
-```
-
----
 
 ## 📚 References
 
@@ -404,13 +387,5 @@ If you use this work in your research, please cite:
 4. Wolpert, D. H. *Stacked generalization*. Neural Networks **5**(2), 241–259 (1992).
 5. Chen, T. & Guestrin, C. *XGBoost: A scalable tree boosting system*. KDD 2016.
 6. Breunig, M. M. et al. *LOF: Identifying density-based local outliers*. SIGMOD 2000.
-
 ---
-
-<div align="center">
-
-*Built with scientific rigor and engineering discipline.*
-
-**Google · Office of the Chief AI Officer**
-
 </div>
